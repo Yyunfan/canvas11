@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+.canvas-box {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.blur-img {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /*margin:0 auto;*/
+    z-index: 1;
+    -webkit-filter: blur(20px);
+    filter: blur(20px);
+}
+
+#canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99
+}
+
+.btn {
+    position: absolute;
+    left: 0;
+    bottom: 16px;
+    z-index: 9999;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+.reset {
+    background-color: #18b4ed;
+    border-radius: 50%;
+    left: 30%;
+}
+
+.show {
+    background-color: #04BE02;
+    border-radius: 50%;
+    left: 55%;
+}
+
+.tips {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    top: 24%;
+    left: 21%;
+    color: #FFD16B;
+    background-image: -webkit-linear-gradient(92deg, #FFD167, #feab3a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+}
+
+.qr {
+    display: none;
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    top: 24%;
+    left: 21%;
+    /*margin-left: -50px;
+    margin-top: -50px;*/
+    z-index: 99999;
+    background: url(qr.jpg) no-repeat center;
+    background-size: contain;
+}
+
+@-webkit-keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        -ms-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none
+    }
+}
+
+.animated {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
+.fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft
+}
+
+@-webkit-keyframes swing {
+    20% {
+        -webkit-transform: rotate3d(0,0,1,15deg);
+        transform: rotate3d(0,0,1,15deg)
+    }
+
+    40% {
+        -webkit-transform: rotate3d(0,0,1,-10deg);
+        transform: rotate3d(0,0,1,-10deg)
+    }
+
+    60% {
+        -webkit-transform: rotate3d(0,0,1,5deg);
+        transform: rotate3d(0,0,1,5deg)
+    }
+
+    80% {
+        -webkit-transform: rotate3d(0,0,1,-5deg);
+        transform: rotate3d(0,0,1,-5deg)
+    }
+
+    100% {
+        -webkit-transform: rotate3d(0,0,1,0deg);
+        transform: rotate3d(0,0,1,0deg)
+    }
+}
+
+@keyframes swing {
+    20% {
+        -webkit-transform: rotate3d(0,0,1,15deg);
+        -ms-transform: rotate3d(0,0,1,15deg);
+        transform: rotate3d(0,0,1,15deg)
+    }
+
+    40% {
+        -webkit-transform: rotate3d(0,0,1,-10deg);
+        -ms-transform: rotate3d(0,0,1,-10deg);
+        transform: rotate3d(0,0,1,-10deg)
+    }
+
+    60% {
+        -webkit-transform: rotate3d(0,0,1,5deg);
+        -ms-transform: rotate3d(0,0,1,5deg);
+        transform: rotate3d(0,0,1,5deg)
+    }
+
+    80% {
+        -webkit-transform: rotate3d(0,0,1,-5deg);
+        -ms-transform: rotate3d(0,0,1,-5deg);
+        transform: rotate3d(0,0,1,-5deg)
+    }
+
+    100% {
+        -webkit-transform: rotate3d(0,0,1,0deg);
+        -ms-transform: rotate3d(0,0,1,0deg);
+        transform: rotate3d(0,0,1,0deg)
+    }
+}
+
+.swing {
+    -webkit-transform-origin: top center;
+    -ms-transform-origin: top center;
+    transform-origin: top center;
+    -webkit-animation-name: swing;
+    animation-name: swing;
+    -webkit-animation-iteration-count: 5;
+    animation-iteration-count: 5;
+}
+
+
+@-webkit-keyframes zoomIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3,.3,.3);
+        transform: scale3d(.3,.3,.3)
+    }
+
+    50% {
+        opacity: 1
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3,.3,.3);
+        -ms-transform: scale3d(.3,.3,.3);
+        transform: scale3d(.3,.3,.3)
+    }
+
+    50% {
+        opacity: 1
+    }
+}
+
+.zoomIn {
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn
+}
